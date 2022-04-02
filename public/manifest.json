@@ -1,0 +1,17 @@
+{
+    "name": "Aplikasi Desa Jelutung",
+    "short_name": "JLT",
+    "start_url": "/index.php",
+    "background_color": "#ffffff",
+    "description": "aplikasi resmi Desa Jelutung",
+    "display": "fullscreen",
+    "theme_color": "#ffffff",
+    "icons": [
+        {
+            "src": "logo1.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}
