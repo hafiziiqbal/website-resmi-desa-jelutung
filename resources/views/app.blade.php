@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Website Resmi Desa Jelutung</title>
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <meta name="theme-color" content="#ffffff" />
     <link rel="apple-touch-icon" href="{{ asset('logo1.png') }}">
@@ -14,11 +15,8 @@
 </head>
 
 <body>
-    <div class="content">
-        <h1>INI ADALAH APLIKASI PWA</h1>
-    </div>
-
-
+    @yield('pages')
+    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('/sw.js') }}"></script>
     <script>
         if (!navigator.serviceWorker.controller) {

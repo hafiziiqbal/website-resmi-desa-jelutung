@@ -11,7 +11,7 @@ const mix = require('laravel-mix');
  |
  */
 mix.browserSync('http://website-resmi-desa-jelutung.test/');
-
+mix.sass('resources/sass/app.scss', 'public/css');
 // Or:
 
 // https://browsersync.io/docs/options/
