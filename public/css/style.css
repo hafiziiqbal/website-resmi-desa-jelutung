@@ -3,11 +3,11 @@
 body {
     font-family: "Poppins", sans-serif;
 }
-
-section {
-    padding: 60px 0;
-    overflow: hidden;
-    position: relative;
+a {
+    text-decoration: none;
+}
+.btn-orange {
+    background-color: var(--bs-orange) !important;
 }
 
 /* Navbar */
@@ -16,7 +16,6 @@ section {
     transition: ease-in-out 0.5s;
 }
 .navbar {
-    animation: 1s ease-out 0s 1 slideInLeft;
     z-index: 999;
     position: fixed;
     width: 100%;
@@ -28,20 +27,25 @@ section {
 .navbar ul li .active {
     color: var(--bs-orange) !important;
 }
-@keyframes slideInLeft {
-    0% {
-        transform: translateY(-100%);
-    }
-    100% {
-        transform: translateY(0);
-    }
+.navbar .dropdown-item:active {
+    color: var(--bs-orange) !important;
+    background-color: #fff !important;
 }
+
 @media (max-width: 500px) {
     .navbar .navbar-brand label:first-child {
         font-size: 16px;
     }
     .navbar .navbar-brand label:nth-child(2) {
         font-size: 12px !important;
+    }
+}
+@media (max-width: 991px) {
+    .navbar-nav {
+        background-color: #f8f9fa;
+    }
+    .navbar-nav li * {
+        color: black !important;
     }
 }
 /* End Navbar */
@@ -54,5 +58,46 @@ section {
     background-size: cover;
     position: relative;
 }
-
+#hero button {
+    color: #3e446b;
+}
+#hero * {
+    color: white;
+}
+#hero label {
+    text-align: justify;
+}
+#hero label a,
+#hero h1 > label {
+    color: var(--bs-orange);
+}
+#hero .card-swipe {
+    width: 400px;
+    height: 250px;
+    background-color: #999999;
+    border-radius: 20px !important;
+    overflow: hidden;
+}
+@media (max-width: 500px) {
+    #hero {
+        padding-top: 100px;
+        background-position: -14em -3em;
+        background-repeat: no-repeat;
+        height: max-content;
+    }
+    #hero .btn {
+        width: 100%;
+    }
+    #hero h1 {
+        text-align: center;
+    }
+    #hero .card-swipe {
+        width: 100%;
+    }
+}
+/* @media (max-width: 1200px) {
+    #hero .card-swipe {
+        width: 100%;
+    }
+} */
 /* End Hero */

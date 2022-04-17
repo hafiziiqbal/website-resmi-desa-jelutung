@@ -1,33 +1,44 @@
-const onscroll = (el, listener) => {
-    el.addEventListener('scroll', listener)
-}
+AOS.init();
 
-const select = (el, all = false) => {
-    el = el.trim()
-    if (all) {
-        return [...document.querySelectorAll(el)]
-    } else {
-        return document.querySelector(el)
-    }
-}
-
-let selectNavBar = select('#navbar')
-if (selectNavBar) {
-    const headerScrolled = () => {
-        if (window.scrollY > 100) {
-            selectNavBar.classList.add('bg-light')
-            selectNavBar.classList.add('navbar-light')
-            selectNavBar.classList.add('shadow-sm')
-            selectNavBar.classList.remove('navbar-dark')
-        } else {
-            selectNavBar.classList.remove('bg-light')
-            selectNavBar.classList.remove('navbar-light')
-            selectNavBar.classList.remove('shadow-sm')
-            selectNavBar.classList.add('navbar-dark')
-
+$(window).scroll(() => {
+    let current = "";
+    let sections = $("section").get();
+    let navLi = $("nav .container ul li a").get();
+    sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 60) {
+            current = section.getAttribute("id");
         }
+    });
+    navLi.forEach((li) => {
+        li.classList.remove("active");
+        if (li.classList.contains(current)) {
+            li.classList.add("active");
+        }
+    });
+});
+
+$(window).scroll(() => {
+    let nav = $('#navbar');
+    let top = 100;
+    if ($(window).scrollTop() >= top) {
+        nav.addClass('bg-light');
+        nav.addClass('navbar-light');
+        nav.addClass('shadow');
+        nav.removeClass('navbar-dark');
+    } else {
+        nav.removeClass('bg-light');
+        nav.removeClass('navbar-light');
+        nav.removeClass('shadow');
+        nav.addClass('navbar-dark');
     }
-    window.addEventListener('load', headerScrolled)
-    onscroll(document, headerScrolled)
-}
-console.log('berhasil');
+});
+
+new Swiper('.hero-slider', {
+    speed: 600,
+    loop: true,
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+    },
+});
