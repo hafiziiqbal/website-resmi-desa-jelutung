@@ -11,19 +11,19 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="hero nav-link active" aria-current="page" href="#hero">Home</a>
+                    <a class="hero nav-link  scrollto active" aria-current="page" href="#hero">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="pemerintahan nav-link" href="#pemerintahan">Pemerintahan</a>
+                    <a class="pemerintahan  scrollto nav-link" href="#pemerintahan">Pemerintahan</a>
                 </li>
                 <li class="nav-item">
-                    <a class="infografis nav-link" href="#">Infografis</a>
+                    <a class="infografis  scrollto nav-link" href="#infografis">Infografis</a>
                 </li>
                 <li class="nav-item">
-                    <a class="pengumuman nav-link" href="#">Pengumuman</a>
+                    <a class="pengumuman  scrollto nav-link" href="#pengumuman">Pengumuman</a>
                 </li>
                 <li class="nav-item">
-                    <a class="berita nav-link" href="#">Berita</a>
+                    <a class="berita  scrollto nav-link" href="#berita">Berita</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"

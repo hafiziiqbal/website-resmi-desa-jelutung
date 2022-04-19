@@ -1,24 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-
-body {
-    font-family: "Poppins", sans-serif;
+.btn-orange {
+    background-color: var(--bs-orange) !important;
 }
 a {
     text-decoration: none;
 }
-.btn-orange {
-    background-color: var(--bs-orange) !important;
+body {
+    font-family: "Poppins", sans-serif;
 }
 
-/* Navbar */
-.navbar-dark,
-.navbar-light {
-    transition: ease-in-out 0.5s;
-}
+/* -----------------------------Navbar----------------------------- */
 .navbar {
-    z-index: 999;
     position: fixed;
     width: 100%;
+    z-index: 999;
+}
+.navbar .dropdown-item:active {
+    background-color: #fff !important;
+    color: var(--bs-orange) !important;
 }
 .navbar .navbar-brand label:first-child {
     color: var(--bs-orange) !important;
@@ -27,11 +26,14 @@ a {
 .navbar ul li .active {
     color: var(--bs-orange) !important;
 }
-.navbar .dropdown-item:active {
-    color: var(--bs-orange) !important;
-    background-color: #fff !important;
+.navbar-dark,
+.navbar-light {
+    transition: ease-in-out 0.5s;
 }
-
+.navbar.scrolled {
+    background-color: #fff !important;
+    transition: background-color 200ms linear;
+}
 @media (max-width: 500px) {
     .navbar .navbar-brand label:first-child {
         font-size: 16px;
@@ -48,21 +50,59 @@ a {
         color: black !important;
     }
 }
-/* End Navbar */
+/* -----------------------------End Navbar----------------------------- */
 
-/* Hero */
-#hero {
-    width: 100%;
-    height: 100vh;
-    background: url("../img/hero-bg.png");
-    background-size: cover;
+/* -----------------------------Section---------------------------- */
+.section-bg {
+    padding: 120px 0px;
+}
+.section-title {
+    text-align: center;
+    padding-bottom: 30px;
     position: relative;
 }
-#hero button {
-    color: #3e446b;
+.section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.section-title h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--bs-orange);
+    bottom: 0;
+    left: calc(50% - 25px);
+}
+
+/* -----------------------------End Section---------------------------- */
+
+/* -----------------------------Hero----------------------------- */
+#hero {
+    background: url("../img/hero-bg.png");
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    width: 100%;
+    background-color: #f6f7ff;
 }
 #hero * {
     color: white;
+}
+#hero .card-swipe {
+    background-color: #999999;
+    border-radius: 20px !important;
+    height: 250px;
+    overflow: hidden;
+    width: 400px;
+}
+#hero button {
+    color: #3e446b;
 }
 #hero label {
     text-align: justify;
@@ -71,33 +111,90 @@ a {
 #hero h1 > label {
     color: var(--bs-orange);
 }
-#hero .card-swipe {
-    width: 400px;
-    height: 250px;
-    background-color: #999999;
-    border-radius: 20px !important;
-    overflow: hidden;
-}
 @media (max-width: 500px) {
     #hero {
-        padding-top: 100px;
         background-position: -14em -3em;
         background-repeat: no-repeat;
         height: max-content;
+        padding-top: 100px;
     }
     #hero .btn {
+        width: 100%;
+    }
+    #hero .card-swipe {
         width: 100%;
     }
     #hero h1 {
         text-align: center;
     }
-    #hero .card-swipe {
-        width: 100%;
+}
+/* -----------------------------End Hero----------------------------- */
+
+/* -----------------------------Pemerintahan----------------------------- */
+#pemerintahan {
+    background-color: #f6f7ff;
+    min-height: 100vh;
+}
+#pemerintahan .row div:first-child h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#pemerintahan label,
+#pemerintahan ul {
+    padding: 0px !important;
+    text-align: justify;
+}
+#pemerintahan li {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+#pemerintahan .bi-check-circle-fill {
+    color: #3e446b;
+}
+#pemerintahan .rounded {
+    border-radius: 15px !important;
+}
+#pemerintahan .shadow {
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+}
+#pemerintahan .bpd {
+    background-image: linear-gradient(
+        to right,
+        #292c3f,
+        #3e446b,
+        #2b5876,
+        #4e4376
+    );
+    height: 100%;
+    height: 100%;
+    width: 100%;
+    background-size: 300% 100%;
+    moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+}
+#pemerintahan .bpd:hover {
+    background-position: 100% 0;
+    moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+#pemerintahan .bpd h3 {
+    color: #f6f7ff;
+}
+#pemerintahan .bi-people-fill {
+    font-size: 100px;
+    color: #f6f7ff;
+}
+@media (max-width: 991px) {
+    #pemerintahan .bi-people-fill {
+        font-size: 52px;
+    }
+    #pemerintahan .bpd h3 {
+        font-size: 15px;
     }
 }
-/* @media (max-width: 1200px) {
-    #hero .card-swipe {
-        width: 100%;
-    }
-} */
-/* End Hero */
