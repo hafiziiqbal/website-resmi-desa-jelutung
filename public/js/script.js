@@ -98,3 +98,12 @@ new Swiper('.hero-slider', {
         disableOnInteraction: false
     },
 });
+
+on('click', '#pemerintahanDesa', function (e) {
+    select('.card-fluid').style.display = "block";
+    select('.card-fluid').style.animation = "fade-in 0.5s";
+
+});
+on('click', '.btn-close', function (e) {
+    select('.card-fluid').style.display = "none";
+});
