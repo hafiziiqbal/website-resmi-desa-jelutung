@@ -1,0 +1,59 @@
+{
+    "data": [
+    {
+      "nama": "Tiger Nixon",
+      "jabatan": "Ketua",
+      "alamat": "Dusun Yudha Putra"
+    },
+    {
+      "nama": "Michael Bruce",
+      "jabatan": "Wakil Ketua",
+      "alamat": "Dusun Yudha Putra"
+    },
+    {
+      "nama": "Diana Dome",
+      "jabatan": "Sekretaris",
+      "alamat": "Dusun Yudha Putra"
+    },
+    {
+      "nama": "Barry Alan",
+      "jabatan": "Ketua Bidang Penyelenggaraan Pemerintah Desa dan Pembinaan Kemasyarakatan",
+      "alamat": "Dusun Tebing Buluh"
+    },
+    {
+      "nama": "Steve Mc. Clause",
+      "jabatan": "Anggota Bidang Penyelenggaraan Pemerintah Desa dan Pembinaan Kemasyarakatan",
+      "alamat": "Dusun Sungai Lakum"
+    },
+    {
+      "nama": "Dominic Fredd",
+      "jabatan": "Anggota Bidang Penyelenggaraan Pemerintah Desa dan Pembinaan Kemasyarakatan",
+      "alamat": "Dusun Tebing Buluh"
+    },
+    {
+      "nama": "Shaun Albert",
+      "jabatan": "Anggota Bidang Penyelenggaraan Pemerintah Desa dan Pembinaan Kemasyarakatan",
+      "alamat": "Dusun Tebing Buluh"
+    },
+    {
+      "nama": "Gilbert Rexy",
+      "jabatan": "Ketua Bidang Pelaksanaan Pembangunan Desa dan Pemberdayaan Masyarakat",
+      "alamat": "Dusun Tebing Buluh"
+    },
+    {
+      "nama": "Anastasya Domini",
+      "jabatan": "Anggota Bidang Pelaksanaan Pembangunan Desa dan Pemberdayaan Masyarakat",
+      "alamat": "Dusun Sungai Lakum"
+    },
+    {
+      "nama": "Crista Ross",
+      "jabatan": "Anggota Bidang Pelaksanaan Pembangunan Desa dan Pemberdayaan Masyarakat",
+      "alamat": "Dusun Sungai Lakum"
+    },
+    {
+      "nama": "Rounda Molina",
+      "jabatan": "Anggota Bidang Pelaksanaan Pembangunan Desa dan Pemberdayaan Masyarakat",
+      "alamat": "Dusun Yudha Putra"
+    }
+    ]
+}
