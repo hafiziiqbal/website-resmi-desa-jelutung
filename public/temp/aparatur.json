@@ -1,0 +1,44 @@
+{
+    "data": [
+        {
+            "nama" : "Walter White",
+            "jabatan" : "Kepala Desa",
+            "gambar": "0005.jpg"
+        },
+        {
+            "nama" : "Dane Julie",
+            "jabatan" : "Sekretaris Desa",
+            "gambar": "0001.jpg"
+        },
+        {
+            "nama" : "Mark Wazky",
+            "jabatan" : "Kepala Urusan Keuangan",
+            "gambar": "0006.jpg"
+        },
+        {
+            "nama" : "Bruce Nathan",
+            "jabatan" : "Kepala Urusan Perencanaan",
+            "gambar": "0007.jpg"
+        },
+        {
+            "nama" : "Rossie Jhon",
+            "jabatan" : "Kepala Urusan Umum dan Tata Usaha",
+            "gambar": "0002.jpg"
+        },
+        {
+            "nama" : "Abraham Dhon",
+            "jabatan" : "Kepala Seksi Pemerintahan",
+            "gambar": "0008.jpg"
+        },
+        {
+            "nama" : "Wanda Abigail",
+            "jabatan" : "Kepala Seksi Kesejahteraan",
+            "gambar": "0003.jpg"
+        },
+        {
+            "nama" : "Sarah Monk",
+            "jabatan" : "Kepala Seksi Pelayanan",
+            "gambar": "0004.jpg"
+        }        
+    ]
+}

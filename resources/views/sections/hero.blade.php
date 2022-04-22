@@ -17,11 +17,28 @@
                 class="col-lg-6 d-flex align-items-center justify-content-lg-end justify-content-md-start">
                 <div class="card-swipe">
                     <div class="hero-slider">
-                        <div class="swiper-wrapper d-flex">
-                            <img src="{{ asset('storage/img/home/slider-1.jpeg') }}" alt="" class="swiper-slide">
-                            <img src="{{ asset('storage/img/home/slider-2.jpeg') }}" alt="" class="swiper-slide">
-                            <img src="{{ asset('storage/img/home/slider-3.jpeg') }}" alt="" class="swiper-slide">
-                            <img src="{{ asset('storage/img/home/slider-4.jpeg') }}" alt="" class="swiper-slide">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" style="background-image: url('{{ asset('storage/img/home/slider-1.jpeg') }}'); height: 300px;
+                                background-size: cover;
+                                background-position: center;
+                                background-repeat: no-repeat;">
+                            </div>
+
+                            <div class="swiper-slide" style="background-image: url('{{ asset('storage/img/home/slider-2.jpeg') }}'); height: 300px;
+                                background-size: cover;
+                                background-position: center;
+                                background-repeat: no-repeat;">
+                            </div>
+                            <div class="swiper-slide" style="background-image: url('{{ asset('storage/img/home/slider-3.jpeg') }}'); height: 300px;
+                                background-size: cover;
+                                background-position: center;
+                                background-repeat: no-repeat;">
+                            </div>
+                            <div class="swiper-slide" style="background-image: url('{{ asset('storage/img/home/slider-4.jpeg') }}'); height: 300px;
+                                background-size: cover;
+                                background-position: center;
+                                background-repeat: no-repeat;">
+                            </div>
                         </div>
                     </div>
                 </div>

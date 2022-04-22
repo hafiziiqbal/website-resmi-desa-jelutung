@@ -4,6 +4,7 @@
 
     @include('sections.hero')
     @include('sections.pemerintahan')
+    @include('sections.aparatur')
     <section id="infografis">
         <div class="container">
             <div class="section-title">

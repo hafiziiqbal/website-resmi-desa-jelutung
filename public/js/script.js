@@ -85,19 +85,6 @@ if (mediaQueryMedium.matches) {
     select('#navbar .navbar-brand label:first-child').innerHTML = "Aplikasi Resmi Desa Jelutung";
 }
 
-
-/**
- * hero slider
- */
-new Swiper('.hero-slider', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-        delay: 5000,
-        disableOnInteraction: false
-    },
-});
-
 /**
  * call card pemerintahan desa
  */
@@ -215,13 +202,73 @@ on('click', '.img-card', function (e) {
 });
 
 
-
-
-
-
-
-
-
+/*
+ * close card fluid 
+ */
 on('click', '.btn-close', function (e) {
     select('.card-fluid').style.display = "none";
+});
+
+/*
+ * call ajax from aparatur
+ */
+$.ajax('temp/aparatur.json', // request url
+    {
+        success: function (data, status, xhr) { // success callback function
+            $.each(data.data, function (index, value) {
+                let cardAparat = '<div class="card-aparat swiper-slide shadow d-flex align-items-end" style=" background-image:url(../storage/img/aparatur/' + value.gambar + ') ;background-size: cover;background-position: center;"><div class="cont-card p-3"><h5 class="noselect fw-bold m-0">' + value.nama + '</h5><label class="noselect" style="color:var(--bs-gray-800)">' + value.jabatan + '</label></div></div>';
+                $('.aparatur-slider .swiper-wrapper').append(cardAparat);
+            });
+            select('.aparatur-slider').style.height = "470px";
+
+        }
+    }
+);
+
+/**
+ * hero slider
+ */
+new Swiper('.hero-slider', {
+    speed: 600,
+    loop: true,
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+    },
+});
+
+/**
+ * aparatur slider
+ */
+new Swiper('.aparatur-slider', {
+    speed: 600,
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+    },
+    slidesPerView: 'auto',
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+
+            spaceBetween: 20
+        },
+
+        600: {
+            slidesPerView: 2,
+
+            spaceBetween: 20
+        },
+
+        1000: {
+            slidesPerView: 3,
+
+            spaceBetween: 20
+        },
+    }
 });

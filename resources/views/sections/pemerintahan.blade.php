@@ -1,4 +1,4 @@
-<section id="pemerintahan" class="section-bg d-flex align-items-center">
+<section id="pemerintahan" class="section-bg">
     <div class="container">
         <div data-aos="zoom-in" data-aos-duration="1000" class="section-title">
             <h2>Pemerintahan</h2>

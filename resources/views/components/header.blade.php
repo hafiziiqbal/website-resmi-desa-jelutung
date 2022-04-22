@@ -1,4 +1,4 @@
-<nav id="navbar" class="navbar navbar-expand-lg navbar-dark">
+<nav id="navbar" class="fixed-top navbar navbar-expand-lg navbar-dark">
     <div class="container">
         <div class="navbar-brand d-flex flex-column">
             <label class="fw-bold">Website Resmi Desa Jelutung</label>

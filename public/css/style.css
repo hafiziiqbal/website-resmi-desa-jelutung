@@ -2,6 +2,15 @@
 .btn-orange {
     background-color: var(--bs-orange) !important;
 }
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
 a {
     text-decoration: none;
 }
@@ -9,7 +18,9 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
-/* -----------------------------Navbar----------------------------- */
+/* 
+* Navbar
+*/
 .navbar {
     position: fixed;
     width: 100%;
@@ -50,9 +61,14 @@ body {
         color: black !important;
     }
 }
-/* -----------------------------End Navbar----------------------------- */
 
-/* -----------------------------Section---------------------------- */
+/* 
+* Section
+*/
+section {
+    min-height: 100vh;
+    position: relative;
+}
 .section-bg {
     padding: 120px 0px;
 }
@@ -80,9 +96,9 @@ body {
     left: calc(50% - 25px);
 }
 
-/* -----------------------------End Section---------------------------- */
-
-/* -----------------------------Hero----------------------------- */
+/* 
+* Hero
+*/
 #hero {
     background: url("../img/hero-bg.png");
     background-size: cover;
@@ -97,9 +113,9 @@ body {
 #hero .card-swipe {
     background-color: #999999;
     border-radius: 20px !important;
-    height: 250px;
+    height: 300px;
     overflow: hidden;
-    width: 400px;
+    width: 100%;
 }
 #hero button {
     color: #3e446b;
@@ -128,12 +144,25 @@ body {
         text-align: center;
     }
 }
-/* -----------------------------End Hero----------------------------- */
 
-/* -----------------------------Pemerintahan----------------------------- */
+/* 
+* Pemerintahan
+*/
 #pemerintahan {
-    background-color: #f6f7ff;
+    background: linear-gradient(#f6f7ff, #f6f7ff);
+    background-position-y: -200px;
+    background-repeat: no-repeat;
     min-height: 100vh;
+}
+#pemerintahan::before {
+    content: "";
+    background: #f6f7ff;
+    position: absolute;
+    bottom: 60px;
+    top: 150px;
+    left: 0;
+    right: 0;
+    transform: skewY(-3deg);
 }
 #pemerintahan .row h3 {
     font-weight: bold;
@@ -198,9 +227,9 @@ body {
     }
 }
 
-/* ---------------------------------End Pemerintahan---------------------------------------- */
-
-/* /* ------------------------------Card Flow----------------------------------------------- */
+/* 
+* Card Flow
+*/
 .card-fluid {
     background: #0d0d0d6b;
     position: fixed;
@@ -228,24 +257,20 @@ body {
 }
 .card-flow h4 {
     margin: 0px;
-    font-size: 15px;
+
     font-weight: bold;
     text-transform: uppercase;
 }
 .card-content label {
     text-align: justify;
 }
-.img-card {
-    max-width: 400px;
-    height: 300px;
-    cursor: pointer;
-}
+
 @media (max-width: 992px) {
     .card-fluid {
         padding: 15px;
     }
-    .img-card {
-        margin: 0px auto;
+    .card-flow h4 {
+        font-size: 15px;
     }
 }
 @keyframes fade-in {
@@ -257,7 +282,14 @@ body {
     }
 }
 
-/* ------------------------------imgZoom----------------------------------------------- */
+/* 
+* Img Card
+*/
+.img-card {
+    max-width: 400px;
+    height: 300px;
+    cursor: pointer;
+}
 #contImg i:active {
     /* font-size: calc(1.3rem + 0.6vw) !important; */
     color: white !important;
@@ -277,4 +309,34 @@ body {
     z-index: 20 !important;
     background-color: #00000091 !important;
     background-position-y: center !important;
+}
+@media (max-width: 992px) {
+    .img-card {
+        margin: 0px auto;
+    }
+}
+
+/* 
+* Aparatur
+ */
+#aparatur .card-aparat {
+    height: 400px;
+    background: #787272;
+    border-radius: 20px;
+}
+#aparatur .cont-card {
+    background: white;
+    width: 100%;
+    height: 100px;
+    border-radius: 0px 0px 20px 20px;
+}
+#aparatur .swiper-pagination .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    opacity: 1;
+    border: 1px solid var(--bs-orange);
+}
+#aparatur .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: var(--bs-orange);
 }
